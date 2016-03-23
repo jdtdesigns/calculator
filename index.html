@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+       
+    	<div class="wrapper row">
+    		<div>
+    			<div class="Calculator column">
+    				<div class="Calculator__screen column center column-center">
+    					<p id="input"></p>
+    					<p id="output">0</p>
+    				</div>
+    				<div class="Calculator__buttons row center">
+    					<div class="column center">
+    						<div class="Calculator__operators row">
+    							<span>CE</span>
+    							<span>C</span>
+    							<span>MC</span>
+    							<span>MR</span>
+    						</div>
+    						<div class="row center">
+    							<span>7</span>
+    							<span>8</span>
+    							<span>9</span>
+    							<span>&#47;</span> <!-- / -->
+    						</div>
+    						<div class="row center">
+    							<span>4</span>
+    							<span>5</span>
+    							<span>6</span>
+    							<span>x</span>
+    						</div>
+    						<div class="row center">
+    							<span>1</span>
+    							<span>2</span>
+    							<span>3</span>
+    							<span>&#45;</span> <!-- - -->
+    						</div>
+    						<div class="row center">
+    							<span class="zero">0</span> 
+    							<span class="decimal">.</span>
+    							<span>&#43;</span> <!-- + -->
+    						</div>
+    					</div>
+    					<div class="column center">
+    						<span id="save">MS</span>
+    						<span>&#8592;</span>
+    						<span>&#37;</span> <!-- % -->
+    						<span class="equal">&#61;</span> <!-- = -->
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+
+       <footer class="column column-center bottom">
+	     <a href="http://freecodecamp.com" target="__blank" class="row column-center">
+	       <h3>freeCodeCamp</h3>
+	       <svg id="fcc" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	          x="0px" y="0px" viewBox="0 0 164.8 129.6"	 xml:space="preserve">
+	        <defs>
+	        </defs>
+	        <g>
+	          <g>
+	            <path  d="M28.8,125.7c0-0.9-0.3-1.7-0.8-2.4C15.3,107.2,7.7,86.9,7.7,64.8S15.3,22.4,28,6.3c0.5-0.7,0.8-1.5,0.8-2.4v0
+	              c0-3.7-4.7-5.3-6.9-2.4C8.2,18.9,0,40.9,0,64.8s8.2,45.9,21.9,63.3C24.2,131,28.8,129.4,28.8,125.7L28.8,125.7z"/>
+	          </g>
+	          <g>
+	            <path  d="M135.9,125.7c0-0.9,0.3-1.7,0.8-2.4c12.7-16.1,20.2-36.4,20.2-58.5s-7.6-42.4-20.2-58.5
+	              c-0.5-0.7-0.8-1.5-0.8-2.4v0c0-3.7,4.7-5.3,6.9-2.4c13.7,17.4,21.9,39.4,21.9,63.3s-8.2,45.9-21.9,63.3
+	              C140.6,131,135.9,129.4,135.9,125.7L135.9,125.7z"/>
+	          </g>
+	          <g>
+	            <path  d="M50.6,67.4c0,0,0.1-0.4,0.2-1.2c0-0.2,0-0.5,0.1-0.7C51.9,58.1,50.6,67.4,50.6,67.4z"/>
+	            <path  d="M101.5,37.8c-7.4-8-6.8-2-6.8-2c6.3,12,0,11.9,0,11.9c-2.9,0.5-5.1-5.1-5.3-5.8c0-0.1,0-0.1,0-0.2
+	              c-1.5-31.2-22.2-31-22.2-31c-6.7-1.4-4.6,1.8-4.6,1.8c17,14.6-3.2,38-4.3,39.3c0,0-0.1,0.1-0.1,0.1c-4.5,2.7-6.6,11.2-7.2,14.4
+	              c0,0,0,0,0,0.1c-0.8,7.1,1,13,1,13C55,93.4,72.2,99,75.4,99.9c0,0,0.6,0,0.7-0.4c0.1-0.3-0.7-0.8-0.7-0.8
+	              c-11.8-3.2-10.5-19.1-10.5-19.7c0,0,0,0,0,0c0.9-5.5,8.4-12,11.8-14.6c1.2-1,2.1-2.4,2.3-4c0.6-4.6-1.8-7.8-1.8-7.8
+	              c-1.1-1.3,0-1.9,0-1.9c11.1,3,8.4,10.2,8.4,10.2c0,0.1-0.1,0.3-0.1,0.4c-1,4.1,0.4,10,0.4,10s-0.7-4.8,0-0.6
+	              c0.7,4.3,5.9,4.3,5.9,4.3c4.3-0.2,4.2-7.1,4.2-7.8c0,0,0-0.1,0-0.1c-0.2-1-0.2-1.6-0.2-2.1c0-0.6,0.8-0.9,1.2-0.4
+	              c10.6,10.5,0,25.4-0.6,26.3c0,0,0,0.1-0.1,0.1c-1.8,1.7-2.8,3.1-3.3,4.1c-0.3,0.5,0.2,1.1,0.8,1l1-0.2c0.2,0,0.3-0.1,0.3-0.1
+	              C134.4,69.2,101.5,37.8,101.5,37.8z"/>
+	          </g>
+	          <path  d="M124.6,118.3H40.9c-3.2,0-5.7-2.6-5.7-5.7v0c0-3.2,2.6-5.7,5.7-5.7h83.8c3.2,0,5.8,2.6,5.8,5.7v0
+	            C130.4,115.7,127.8,118.3,124.6,118.3z"/>
+	        </g>
+	       </svg>
+	       <h3>Calculator</h3>
+	    </a>
+	    <div class="row center column-center info">
+	      <span>Design and Development by: JD Tadlock</span>
+	      <a href="https://www.linkedin.com/in/jd-tadlock-66323184" class="fa fa-linkedin" target="__blank"></a>
+	      <a href="https://www.freecodecamp.com/jdtdesigns" target="__blank">
+	        <svg class="info-fcc"><use xlink:href="#fcc"></use></svg>
+	      </a>
+	      <a href="https://github.com/jdtdesigns" class="fa fa-github" target="__blank"></a>
+	      <a href="https://twitter.com/JDTadlock?lang=en" class="fa fa-twitter" target="__blank"></a>
+	    </div>
+	  </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
